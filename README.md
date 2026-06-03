@@ -25,6 +25,7 @@
 │   ├── advanced_workflow.py           # 综合串联场景
 │   └── cli.py                         # 命令行入口
 ├── docs/
+│   ├── quickstart_zh.md               # 量子计算快速入门
 │   ├── learning_guide_zh.md           # 量子计算与 Qiskit 学习指南
 │   ├── example_walkthrough_zh.md      # 每个样例的讲解
 │   └── advanced_workflow_zh.md        # 综合场景讲解
@@ -111,11 +112,12 @@ python examples/06_grover_search.py
 
 建议按下面顺序阅读和运行：
 
-1. 阅读 [docs/learning_guide_zh.md](docs/learning_guide_zh.md)，建立量子比特、电路、测量和 Qiskit 基础。
-2. 运行 `quantum-samples --shots 1024 basics`，观察 counts 和 statevector。
-3. 阅读 [docs/example_walkthrough_zh.md](docs/example_walkthrough_zh.md)，对照每个示例理解电路。
-4. 运行 `quantum-samples --shots 1024 advanced --output outputs/advanced_report.json`。
-5. 阅读 [docs/advanced_workflow_zh.md](docs/advanced_workflow_zh.md)，修改路线评分、oracle、噪声强度、QAOA 图结构。
+1. 阅读 [docs/quickstart_zh.md](docs/quickstart_zh.md)，用 30 到 90 分钟建立第一层直觉。
+2. 阅读 [docs/learning_guide_zh.md](docs/learning_guide_zh.md)，建立量子比特、电路、测量和 Qiskit 基础。
+3. 运行 `quantum-samples --shots 1024 basics`，观察 counts 和 statevector。
+4. 阅读 [docs/example_walkthrough_zh.md](docs/example_walkthrough_zh.md)，对照每个示例理解电路。
+5. 运行 `quantum-samples --shots 1024 advanced --output outputs/advanced_report.json`。
+6. 阅读 [docs/advanced_workflow_zh.md](docs/advanced_workflow_zh.md)，修改路线评分、oracle、噪声强度、QAOA 图结构。
 
 ## 常见问题
 
