@@ -13,6 +13,7 @@
 - Qiskit 官方文档：https://quantum.cloud.ibm.com/docs/api/qiskit
 - IBM Quantum 文档：https://docs.quantum.ibm.com
 - Qiskit GitHub 主题页：https://github.com/topics/qiskit
+- 推荐教学视频：[Quantum computing overview on YouTube](https://www.youtube.com/watch?v=h7RA7yyMBYY&t=266s)，适合先建立直觉，再回到本仓库示例动手实践。
 
 ## 项目结构
 
