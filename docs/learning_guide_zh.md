@@ -156,36 +156,36 @@ Grover 搜索通常需要一个 phase oracle：
 
 这个负号本身测不出来，但它会在后续的 diffuser 中变成可测的振幅放大。
 
-## 10. QFT 与相位估计
+## 10. [QFT](glossary_zh.md#qft) 与相位估计
 
-量子傅里叶变换 QFT 是很多算法的核心，比如 Shor 算法和量子相位估计。它把周期性和相位信息转换成计算基上的分布。
+量子傅里叶变换 [QFT](glossary_zh.md#qft) 是很多算法的核心，比如 Shor 算法和量子相位估计。它把周期性和相位信息转换成计算基上的分布。
 
-量子相位估计 QPE 的目标是：给定一个酉算子 `U` 和它的本征态 `|u>`，如果：
+量子相位估计 [QPE](glossary_zh.md#qpe) 的目标是：给定一个酉算子 `U` 和它的本征态 `|u>`，如果：
 
 ```text
 U |u> = exp(2πiθ) |u>
 ```
 
-QPE 可以估计 `θ`。本仓库用一个单 qubit phase gate 构造最小示例，选择 `θ = 3/8`，因此 3 个 evaluation qubits 可以精确读出 `011`。
+[QPE](glossary_zh.md#qpe) 可以估计 `θ`。本仓库用一个单 qubit phase gate 构造最小示例，选择 `θ = 3/8`，因此 3 个 evaluation qubits 可以精确读出 `011`。
 
-## 11. VQE：混合量子-经典算法
+## 11. [VQE](glossary_zh.md#vqe)：混合量子-经典算法
 
-Variational Quantum Eigensolver 的模式是：
+[Variational Quantum Eigensolver](glossary_zh.md#vqe) 的模式是：
 
-1. 选择一个带参数的量子电路，也叫 ansatz。
+1. 选择一个带参数的量子电路，也叫 [ansatz](glossary_zh.md#ansatz)。
 2. 在量子电路上制备状态。
-3. 测量 Hamiltonian 的期望值，也就是能量。
+3. 测量 [Hamiltonian](glossary_zh.md#hamiltonian) 的期望值，也就是能量。
 4. 用经典优化器更新参数。
 5. 重复直到能量尽量低。
 
 真实 VQE 会涉及 Pauli decomposition、shot noise、optimizer、硬件误差缓解等细节。本仓库为了让代码透明，使用小 Hamiltonian 和网格搜索，不引入额外优化器。
 
-## 12. QAOA：优化问题示例
+## 12. [QAOA](glossary_zh.md#qaoa)：优化问题示例
 
-Quantum Approximate Optimization Algorithm 常用于组合优化示例。它交替使用：
+[Quantum Approximate Optimization Algorithm](glossary_zh.md#qaoa) 常用于组合优化示例。它交替使用：
 
-- cost unitary：把目标函数编码进相位；
-- mixer unitary：让状态在候选解之间流动；
+- [cost unitary / cost layer](glossary_zh.md#cost-layer)：把目标函数编码进相位；
+- [mixer unitary / mixer layer](glossary_zh.md#mixer-layer)：让状态在候选解之间流动；
 - classical optimizer：寻找好的参数。
 
 本仓库的综合场景用一层 QAOA 解一个四节点 MaxCut 玩具问题。它不是大规模优化器，只是展示“问题图 -> 参数化电路 -> 期望值 -> 采样解”的完整形状。

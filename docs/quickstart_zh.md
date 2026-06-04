@@ -236,38 +236,38 @@ assignment_to_bitstring([0, 1])
 它通过 oracle 标记 + 振幅放大，把目标答案的测量概率变大。
 ```
 
-### QPE
+### [QPE](glossary_zh.md#qpe)
 
 目标：估计酉算子的本征相位。
 
 你应该记住：
 
 ```text
-QPE 把相位信息变成可读的二进制 bits。
+[QPE](glossary_zh.md#qpe) 把相位信息变成可读的二进制 bits。
 ```
 
 它是 Shor 算法等更复杂算法的重要子程序。
 
-### VQE
+### [VQE](glossary_zh.md#vqe)
 
-目标：估计 Hamiltonian 的低能量态。
+目标：估计 [Hamiltonian](glossary_zh.md#hamiltonian) 的低能量态。
 
 你应该记住：
 
 ```text
-VQE = 参数化量子电路 + 经典优化器。
+[VQE](glossary_zh.md#vqe) = 参数化量子电路 + 经典优化器。
 ```
 
 它是 NISQ 时代很常见的混合量子-经典算法范式。
 
-### QAOA
+### [QAOA](glossary_zh.md#qaoa)
 
 目标：求组合优化问题的近似解，例如 MaxCut。
 
 你应该记住：
 
 ```text
-QAOA = cost layer + mixer layer + 参数搜索。
+[QAOA](glossary_zh.md#qaoa) = [cost layer](glossary_zh.md#cost-layer) + [mixer layer](glossary_zh.md#mixer-layer) + 参数搜索。
 ```
 
 本仓库在综合场景中用 QAOA 做四节点 MaxCut 教学示例。

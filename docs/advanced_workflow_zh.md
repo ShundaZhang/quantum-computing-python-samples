@@ -37,14 +37,14 @@ score = priority * 3 - distance - congestion - battery_risk
 
 | 步骤 | 代码函数 | 量子计算概念 | 输出 |
 | --- | --- | --- | --- |
-| 1 | `quantum_random_bits` | QRNG、Hadamard、测量 | 随机 bit 串 |
-| 2 | `bb84_sifted_key` | BB84 basis sifting | sifted key |
+| 1 | `quantum_random_bits` | [QRNG](glossary_zh.md#qrng)、Hadamard、测量 | 随机 bit 串 |
+| 2 | `bb84_sifted_key` | [BB84](glossary_zh.md#bb84) [basis sifting](glossary_zh.md#basis-sifting) | sifted key |
 | 3 | `superdense_coding_demo` | Bell pair、超密编码 | 解码路线 bit |
 | 4 | `teleport_route_state` | 隐形传态、fidelity | 传态保真度 |
 | 5 | `choose_route_with_grover` | phase oracle、振幅放大 | 选中路线 |
-| 6 | `phase_estimation_demo` | QPE、inverse QFT | phase bits |
-| 7 | `vqe_demo` | ansatz、Hamiltonian、期望值 | 最低能量近似 |
-| 8 | `qaoa_route_partition` | QAOA、MaxCut | 分区 bitstring |
+| 6 | `phase_estimation_demo` | [QPE](glossary_zh.md#qpe)、[inverse QFT](glossary_zh.md#inverse-qft) | phase bits |
+| 7 | `vqe_demo` | [ansatz](glossary_zh.md#ansatz)、[Hamiltonian](glossary_zh.md#hamiltonian)、期望值 | 最低能量近似 |
+| 8 | `qaoa_route_partition` | [QAOA](glossary_zh.md#qaoa)、MaxCut | 分区 bitstring |
 | 9 | `noisy_bell_comparison` | noise model | 理想/噪声 counts |
 | 10 | `transpilation_snapshot` | transpile、depth、ops | 编译前后指标 |
 
@@ -127,9 +127,9 @@ Grover 的直觉：
 
 四个候选时，一次 Grover iteration 就能把目标概率推到 1，因此测试中 `found == "10"`。
 
-## 8. QPE：传感器相位校准
+## 8. [QPE](glossary_zh.md#qpe)：传感器相位校准
 
-流程中加入 QPE 作为“传感器相位校准”的示意。我们构造一个已知 phase：
+流程中加入 [QPE](glossary_zh.md#qpe) 作为“传感器相位校准”的示意。我们构造一个已知 phase：
 
 ```text
 theta = 3/8
@@ -141,18 +141,18 @@ theta = 3/8
 011
 ```
 
-QPE 输出：
+[QPE](glossary_zh.md#qpe) 输出：
 
 ```text
 measured_bits = "011"
 estimated_phase = 0.375
 ```
 
-这个步骤展示了 QFT 类子程序如何把相位信息变成 classical bits。
+这个步骤展示了 [QFT](glossary_zh.md#qft) 类子程序如何把相位信息变成 classical bits。
 
-## 9. VQE：能量代理估计
+## 9. [VQE](glossary_zh.md#vqe)：能量代理估计
 
-调度系统里可以想象有一个“能耗/风险 Hamiltonian”。示例使用一个两 qubit toy Hamiltonian：
+调度系统里可以想象有一个“能耗/风险 [Hamiltonian](glossary_zh.md#hamiltonian)”。示例使用一个两 qubit toy Hamiltonian：
 
 ```python
 ("II", 0.20)
@@ -162,24 +162,24 @@ estimated_phase = 0.375
 ("XX", 0.55)
 ```
 
-VQE 做的是：
+[VQE](glossary_zh.md#vqe) 做的是：
 
-1. 用参数化 ansatz 制备状态。
-2. 计算 Hamiltonian 期望值。
+1. 用参数化 [ansatz](glossary_zh.md#ansatz) 制备状态。
+2. 计算 [Hamiltonian](glossary_zh.md#hamiltonian) 期望值。
 3. 经典网格搜索参数。
 4. 找到最低能量近似。
 
-真实 VQE 通常需要更好的 ansatz、优化器、shot-based expectation、误差缓解和问题映射。这里保留最小可懂版本。
+真实 [VQE](glossary_zh.md#vqe) 通常需要更好的 [ansatz](glossary_zh.md#ansatz)、优化器、shot-based expectation、误差缓解和问题映射。这里保留最小可懂版本。
 
-## 10. QAOA：路线监控分区
+## 10. [QAOA](glossary_zh.md#qaoa)：路线监控分区
 
-QAOA 部分把四个路线监控节点构造成 MaxCut 图：
+[QAOA](glossary_zh.md#qaoa) 部分把四个路线监控节点构造成 MaxCut 图：
 
 ```python
 edges = [(0, 1), (1, 2), (2, 3), (0, 3), (1, 3)]
 ```
 
-一层 QAOA：
+一层 [QAOA](glossary_zh.md#qaoa)：
 
 ```python
 for left, right in edges:
