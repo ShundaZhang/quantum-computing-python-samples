@@ -30,6 +30,7 @@
 │   ├── quantum_computing_intro_course_zh.md
 │   │                                  # 系统入门课程、习题与答案
 │   ├── bb84_protocol_zh.md            # BB84 量子密钥分发详解
+│   ├── shor_algorithm_zh.md           # Shor 算法技术细节图解
 │   ├── assets/                        # 文档图片资源
 │   ├── learning_guide_zh.md           # 量子计算与 Qiskit 学习指南
 │   ├── example_walkthrough_zh.md      # 每个样例的讲解
@@ -120,11 +121,12 @@ python examples/06_grover_search.py
 1. 阅读 [docs/quickstart_zh.md](docs/quickstart_zh.md)，用 30 到 90 分钟建立第一层直觉。
 2. 阅读 [docs/quantum_computing_intro_course_zh.md](docs/quantum_computing_intro_course_zh.md)，系统学习 9 章核心概念并完成习题。
 3. 阅读 [docs/bb84_protocol_zh.md](docs/bb84_protocol_zh.md)，理解 BB84 量子密钥分发和窃听检测。
-4. 阅读 [docs/learning_guide_zh.md](docs/learning_guide_zh.md)，建立量子比特、电路、测量和 Qiskit 基础。
-5. 运行 `quantum-samples --shots 1024 basics`，观察 counts 和 statevector。
-6. 阅读 [docs/example_walkthrough_zh.md](docs/example_walkthrough_zh.md)，对照每个示例理解电路。
-7. 运行 `quantum-samples --shots 1024 advanced --output outputs/advanced_report.json`。
-8. 阅读 [docs/advanced_workflow_zh.md](docs/advanced_workflow_zh.md)，修改路线评分、oracle、噪声强度、QAOA 图结构。
+4. 阅读 [docs/shor_algorithm_zh.md](docs/shor_algorithm_zh.md)，理解 Shor 算法如何把整数分解转化为周期寻找。
+5. 阅读 [docs/learning_guide_zh.md](docs/learning_guide_zh.md)，建立量子比特、电路、测量和 Qiskit 基础。
+6. 运行 `quantum-samples --shots 1024 basics`，观察 counts 和 statevector。
+7. 阅读 [docs/example_walkthrough_zh.md](docs/example_walkthrough_zh.md)，对照每个示例理解电路。
+8. 运行 `quantum-samples --shots 1024 advanced --output outputs/advanced_report.json`。
+9. 阅读 [docs/advanced_workflow_zh.md](docs/advanced_workflow_zh.md)，修改路线评分、oracle、噪声强度、QAOA 图结构。
 
 ## 常见问题
 
