@@ -35,6 +35,7 @@
 │   ├── bb84_protocol_zh.md            # BB84 量子密钥分发详解
 │   ├── grover_algorithm_zh.md         # Grover 搜索与振幅放大详解
 │   ├── shor_algorithm_zh.md           # Shor 算法技术细节图解
+│   ├── shor_grover_speedup_zh.md      # Shor 与 Grover 复杂度加速对比
 │   ├── post_quantum_cryptography_zh.md # PQC 影响评估、算法原理与迁移指南
 │   ├── assets/                        # 文档图片资源
 │   ├── learning_guide_zh.md           # 量子计算与 Qiskit 学习指南
@@ -130,12 +131,13 @@ python examples/06_grover_search.py
 5. 阅读 [docs/bb84_protocol_zh.md](docs/bb84_protocol_zh.md)，理解 BB84 量子密钥分发和窃听检测。
 6. 阅读 [docs/grover_algorithm_zh.md](docs/grover_algorithm_zh.md)，理解 Grover 如何用 oracle 和 diffuser 放大目标振幅。
 7. 阅读 [docs/shor_algorithm_zh.md](docs/shor_algorithm_zh.md)，理解 Shor 算法如何把整数分解转化为周期寻找。
-8. 阅读 [docs/post_quantum_cryptography_zh.md](docs/post_quantum_cryptography_zh.md)，评估 PQC 对 RSA/ECC/AES/签名/PKI 的影响，理解 ML-KEM、ML-DSA、SLH-DSA、HQC 等算法原理和迁移路线。
-9. 阅读 [docs/learning_guide_zh.md](docs/learning_guide_zh.md)，建立量子比特、电路、测量和 Qiskit 基础。
-10. 运行 `quantum-samples --shots 1024 basics`，观察 counts 和 statevector。
-11. 阅读 [docs/example_walkthrough_zh.md](docs/example_walkthrough_zh.md)，对照每个示例理解电路。
-12. 运行 `quantum-samples --shots 1024 advanced --output outputs/advanced_report.json`。
-13. 阅读 [docs/advanced_workflow_zh.md](docs/advanced_workflow_zh.md)，修改路线评分、oracle、噪声强度、QAOA 图结构。
+8. 阅读 [docs/shor_grover_speedup_zh.md](docs/shor_grover_speedup_zh.md)，对比 Shor 的多项式加速和 Grover 的平方加速，理解它们对密码算法的威胁差异。
+9. 阅读 [docs/post_quantum_cryptography_zh.md](docs/post_quantum_cryptography_zh.md)，评估 PQC 对 RSA/ECC/AES/签名/PKI 的影响，理解 ML-KEM、ML-DSA、SLH-DSA、HQC 等算法原理和迁移路线。
+10. 阅读 [docs/learning_guide_zh.md](docs/learning_guide_zh.md)，建立量子比特、电路、测量和 Qiskit 基础。
+11. 运行 `quantum-samples --shots 1024 basics`，观察 counts 和 statevector。
+12. 阅读 [docs/example_walkthrough_zh.md](docs/example_walkthrough_zh.md)，对照每个示例理解电路。
+13. 运行 `quantum-samples --shots 1024 advanced --output outputs/advanced_report.json`。
+14. 阅读 [docs/advanced_workflow_zh.md](docs/advanced_workflow_zh.md)，修改路线评分、oracle、噪声强度、QAOA 图结构。
 
 ## 常见问题
 

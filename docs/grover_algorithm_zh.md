@@ -408,6 +408,8 @@ flowchart TB
 
 这是 Grover 加速的根源。它不是指数级，是平方级；但对大规模无结构搜索仍然非常有意义。
 
+如果想把 Grover 的平方加速和 Shor 的多项式时间击穿放在一起比较，可以阅读 [shor_grover_speedup_zh.md](shor_grover_speedup_zh.md)。
+
 ## 11. Grover 的局限
 
 学习 Grover 时很容易有几个误解。

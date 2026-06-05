@@ -4,6 +4,8 @@
 
 如果你遇到缩略语，可以先查 [常用词汇表](glossary_zh.md)，例如 [PQC](glossary_zh.md#pqc)、[CRQC](glossary_zh.md#crqc)、[KEM](glossary_zh.md#kem)、[AEAD](glossary_zh.md#aead)、[ML-KEM](glossary_zh.md#ml-kem)、[ML-DSA](glossary_zh.md#ml-dsa)、[SLH-DSA](glossary_zh.md#slh-dsa)。
 
+如果你想先看 Shor 和 Grover 的时间复杂度对比，以及它们为什么分别威胁公钥和对称密码，可以阅读 [shor_grover_speedup_zh.md](shor_grover_speedup_zh.md)。
+
 一句话总结：
 
 ```text

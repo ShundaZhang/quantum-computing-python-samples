@@ -448,6 +448,8 @@ Shor 算法：多项式时间
 
 这就是它对 RSA 重要的原因。
 
+如果想把 Shor 和 Grover 的复杂度加速、密码学威胁放在同一张表里比较，可以阅读 [shor_grover_speedup_zh.md](shor_grover_speedup_zh.md)。
+
 但这不等于今天的量子电脑已经能破解实际 RSA：
 
 - 需要足够多的逻辑 qubit。
