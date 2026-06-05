@@ -492,6 +492,8 @@ Bob 看到 0/1 各一半
 
 只有他们事后用 classical communication 比较结果，才会发现相关性。因此纠缠不能用来发送可控信息，也不能超光速通信。
 
+如果想进一步理解 EPR 佯谬、贝尔不等式、薛定谔的猫和无信号定理，可以阅读 [quantum_paradoxes_zh.md](quantum_paradoxes_zh.md)。
+
 ### 本章练习
 
 1. 写出两个 qubit 的四个计算基态。
