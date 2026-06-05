@@ -15,6 +15,7 @@
 - IBM Quantum 文档：https://docs.quantum.ibm.com
 - Qiskit GitHub 主题页：https://github.com/topics/qiskit
 - 推荐教学视频：[Quantum computing overview on YouTube](https://www.youtube.com/watch?v=h7RA7yyMBYY&t=266s)，适合先建立直觉，再回到本仓库示例动手实践。
+- Grover 直观讲解视频：[3Blue1Brown: But what is quantum computing? (Grover's Algorithm)](https://www.youtube.com/watch?v=RQWpF2Gb-gU)，适合配合 [docs/grover_algorithm_zh.md](docs/grover_algorithm_zh.md) 理解 oracle、相位标记和振幅放大。
 
 ## 项目结构
 
