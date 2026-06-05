@@ -172,6 +172,8 @@ fidelity = state_fidelity(input_state, output_state)
 
 Grover 用于无结构搜索。给定 `N` 个候选和一个 oracle，它能以约 `O(sqrt(N))` 次 oracle 查询找到目标。四个候选时，只需一次迭代就能把目标振幅放大到 1。
 
+如果想看振幅放大、oracle、diffuser 和迭代次数的完整推导，读 [grover_algorithm_zh.md](grover_algorithm_zh.md)。
+
 本仓库示例：
 
 ```python

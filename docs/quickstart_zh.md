@@ -236,6 +236,8 @@ assignment_to_bitstring([0, 1])
 它通过 oracle 标记 + 振幅放大，把目标答案的测量概率变大。
 ```
 
+完整推导和图解见 [grover_algorithm_zh.md](grover_algorithm_zh.md)。
+
 ### [QPE](glossary_zh.md#qpe)
 
 目标：估计酉算子的本征相位。
