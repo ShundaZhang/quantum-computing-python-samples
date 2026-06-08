@@ -7,6 +7,7 @@
 - 常见基础例子：叠加、纠缠、超密编码、量子隐形传态、Deutsch-Jozsa、Grover、QPE、VQE。
 - 一个较复杂的综合场景：把 QRNG、BB84 思想、超密编码、隐形传态、Grover、相位估计、VQE、QAOA、噪声模拟、transpilation 串在同一个故事里。
 - 详细中文文档：从量子比特和门开始，逐步讲到 Qiskit 代码结构、比特序、模拟器、噪声和混合量子-经典优化。
+- Quantum CTF 实战分类：把 HTB Quantum 类题目总结成可学习的量子攻防案例。
 - 常用缩略语和概念可随时查 [docs/glossary_zh.md](docs/glossary_zh.md)。
 
 参考入口：
@@ -38,6 +39,7 @@
 │   ├── shor_algorithm_zh.md           # Shor 算法技术细节图解
 │   ├── shor_grover_speedup_zh.md      # Shor 与 Grover 复杂度加速对比
 │   ├── post_quantum_cryptography_zh.md # PQC 影响评估、算法原理与迁移指南
+│   ├── quantum_ctf_zh.md             # Quantum CTF 实战题型与 HTB Quantum 总结
 │   ├── assets/                        # 文档图片资源
 │   ├── learning_guide_zh.md           # 量子计算与 Qiskit 学习指南
 │   ├── example_walkthrough_zh.md      # 每个样例的讲解
@@ -121,6 +123,17 @@ python examples/06_grover_search.py
 
 这个流程不是声称量子计算已经能在真实调度问题上胜过经典算法；它的用途是教学：在一个统一的故事里看到常见概念如何组合。
 
+## Quantum CTF 实战分类
+
+[docs/quantum_ctf_zh.md](docs/quantum_ctf_zh.md) 汇总了作者 HTB 仓库中 Quantum 类 CTF 的学习版笔记，覆盖 QLotto、Phase Madness、Flagportation、Noisy Vault、Global Hyperlink Zone、Untrusted Node 等题型。
+
+它重点讲：
+
+- 如何从 `server.py` 里定位 secret 被编码在哪里。
+- 如何利用测量基、counts、Bell 测量结果和 bit order 还原隐藏信息。
+- 如何识别“看似量子，实则经典统计/代码审计”的漏洞。
+- 如何把 BB84、隐形传态、纠缠态、噪声模型落实到 CTF 攻防思维里。
+
 ## 学习路线
 
 建议按下面顺序阅读和运行：
@@ -130,15 +143,16 @@ python examples/06_grover_search.py
 3. 阅读 [docs/quantum_computing_intro_course_zh.md](docs/quantum_computing_intro_course_zh.md)，系统学习 9 章核心概念并完成习题。
 4. 阅读 [docs/quantum_paradoxes_zh.md](docs/quantum_paradoxes_zh.md)，用双缝干涉、量子隧穿、EPR、贝尔不等式和薛定谔的猫理解波函数、纠缠、测量、无信号和因果性。
 5. 阅读 [docs/bb84_protocol_zh.md](docs/bb84_protocol_zh.md)，理解 BB84 量子密钥分发和窃听检测。
-6. 阅读 [docs/grover_algorithm_zh.md](docs/grover_algorithm_zh.md)，理解 Grover 如何用 oracle 和 diffuser 放大目标振幅。
-7. 阅读 [docs/shor_algorithm_zh.md](docs/shor_algorithm_zh.md)，理解 Shor 算法如何把整数分解转化为周期寻找。
-8. 阅读 [docs/shor_grover_speedup_zh.md](docs/shor_grover_speedup_zh.md)，对比 Shor 的多项式加速和 Grover 的平方加速，理解它们对密码算法的威胁差异。
-9. 阅读 [docs/post_quantum_cryptography_zh.md](docs/post_quantum_cryptography_zh.md)，评估 PQC 对 RSA/ECC/AES/签名/PKI 的影响，理解 ML-KEM、ML-DSA、SLH-DSA、HQC 等算法原理和迁移路线。
-10. 阅读 [docs/learning_guide_zh.md](docs/learning_guide_zh.md)，建立量子比特、电路、测量和 Qiskit 基础。
-11. 运行 `quantum-samples --shots 1024 basics`，观察 counts 和 statevector。
-12. 阅读 [docs/example_walkthrough_zh.md](docs/example_walkthrough_zh.md)，对照每个示例理解电路。
-13. 运行 `quantum-samples --shots 1024 advanced --output outputs/advanced_report.json`。
-14. 阅读 [docs/advanced_workflow_zh.md](docs/advanced_workflow_zh.md)，修改路线评分、oracle、噪声强度、QAOA 图结构。
+6. 阅读 [docs/quantum_ctf_zh.md](docs/quantum_ctf_zh.md)，把 Bell 态、测量基、BB84、隐形传态、噪声模型放进 Quantum CTF 攻防场景里理解。
+7. 阅读 [docs/grover_algorithm_zh.md](docs/grover_algorithm_zh.md)，理解 Grover 如何用 oracle 和 diffuser 放大目标振幅。
+8. 阅读 [docs/shor_algorithm_zh.md](docs/shor_algorithm_zh.md)，理解 Shor 算法如何把整数分解转化为周期寻找。
+9. 阅读 [docs/shor_grover_speedup_zh.md](docs/shor_grover_speedup_zh.md)，对比 Shor 的多项式加速和 Grover 的平方加速，理解它们对密码算法的威胁差异。
+10. 阅读 [docs/post_quantum_cryptography_zh.md](docs/post_quantum_cryptography_zh.md)，评估 PQC 对 RSA/ECC/AES/签名/PKI 的影响，理解 ML-KEM、ML-DSA、SLH-DSA、HQC 等算法原理和迁移路线。
+11. 阅读 [docs/learning_guide_zh.md](docs/learning_guide_zh.md)，建立量子比特、电路、测量和 Qiskit 基础。
+12. 运行 `quantum-samples --shots 1024 basics`，观察 counts 和 statevector。
+13. 阅读 [docs/example_walkthrough_zh.md](docs/example_walkthrough_zh.md)，对照每个示例理解电路。
+14. 运行 `quantum-samples --shots 1024 advanced --output outputs/advanced_report.json`。
+15. 阅读 [docs/advanced_workflow_zh.md](docs/advanced_workflow_zh.md)，修改路线评分、oracle、噪声强度、QAOA 图结构。
 
 ## 常见问题
 

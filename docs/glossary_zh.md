@@ -1,6 +1,6 @@
 # 量子计算与后量子密码常用词汇表
 
-这份词汇表收集本仓库文档中反复出现的缩略语和核心概念。读正文时遇到 `QPE`、`逆 QFT`、`KEM`、`ML-KEM` 这类词，可以先来这里建立直觉，再回到对应章节。
+这份词汇表收集本仓库文档中反复出现的缩略语和核心概念。读正文时遇到 `QPE`、`逆 QFT`、`KEM`、`ML-KEM`、`CTF` 这类词，可以先来这里建立直觉，再回到对应章节。
 
 ## 1. 量子计算基础
 
@@ -289,7 +289,39 @@ BB84 中 Alice 和 Bob 公开比较使用了哪个测量基，但不公开比特
 
 密码学和量子通信里常用 Alice 表示发送方，Bob 表示接收方，Eve 表示窃听者。
 
-## 5. 后量子密码和安全迁移
+## 5. Quantum CTF 与实战术语
+
+<a id="ctf"></a>
+### CTF：Capture The Flag
+
+CTF 是一种安全竞赛或练习形式。参赛者通过逆向、密码分析、漏洞利用、协议分析等方式找到隐藏的 flag。Quantum CTF 是把量子电路、量子协议和安全工程结合起来的 CTF 题型。
+
+<a id="quantum-ctf"></a>
+### Quantum CTF：量子 CTF
+
+Quantum CTF 通常不会要求发明新的量子算法，而是要求读懂量子电路或量子协议实现，找到 secret 的编码方式、测量接口、输入过滤漏洞、bit order 问题或统计恢复方法。
+
+<a id="pauli-correction"></a>
+### Pauli Correction：Pauli 纠正
+
+Pauli 纠正常见于量子隐形传态。Alice 的 Bell 测量会产生两个 classical bits，Bob 需要根据这些 bits 对自己的 qubit 施加 `X` 和/或 `Z`，才能恢复原始量子态。
+
+<a id="majority-voting"></a>
+### Majority Voting：多数投票
+
+多数投票是从带噪声重复测量中恢复经典 bit 的简单方法。对每一位统计 0 和 1 的出现次数，选择多数作为估计值。它适合 secret 本质是经典 bitstring、噪声率较低、shots 足够多的场景。
+
+<a id="ghz-style-correlation"></a>
+### GHZ-style Correlation：GHZ 风格相关态
+
+GHZ 态是多 qubit 强相关态的典型例子。CTF 中有时不需要完整 GHZ 态，只需要构造类似“多个 qubit 每次测量结果保持相同或相反”的稳定相关结构。
+
+<a id="endian"></a>
+### Endian / Bit Order：端序 / 比特序
+
+比特序描述 bitstring 字符位置和 qubit/classical bit 编号之间的对应关系。Qiskit counts 字符串常按高编号 classical bit 到低编号 classical bit 显示，因此 CTF 中经常需要确认是否要反转。
+
+## 6. 后量子密码和安全迁移
 
 <a id="pqc"></a>
 ### PQC：Post-Quantum Cryptography，后量子密码
