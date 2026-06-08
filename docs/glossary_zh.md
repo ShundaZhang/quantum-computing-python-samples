@@ -76,6 +76,21 @@ U|u⟩ = e^(2πiθ)|u⟩
 
 相位是复数振幅中的角度部分。单个全局相位通常测不出来，但不同基态之间的相对相位会影响干涉，Grover、QFT、QPE 都依赖这一点。
 
+<a id="wavefunction"></a>
+### Wavefunction：波函数
+
+波函数是描述量子系统状态的数学对象。它本身不是直接可见的经典波；波函数的模平方给出测量概率密度，波函数的相位会影响干涉。
+
+<a id="double-slit"></a>
+### Double-Slit Experiment：双缝实验
+
+双缝实验展示量子粒子的波粒二象性。未测路径时，单粒子长期累积会出现干涉条纹；一旦获得路径信息，干涉通常消失。
+
+<a id="quantum-tunneling"></a>
+### Quantum Tunneling：量子隧穿
+
+量子隧穿指粒子能量低于势垒高度时，仍有概率出现在势垒另一侧。它来自波函数在势垒区域的指数衰减但非零延伸。
+
 <a id="entanglement"></a>
 ### Entanglement：纠缠
 

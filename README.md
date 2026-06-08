@@ -32,7 +32,7 @@
 │   ├── glossary_zh.md                 # 常用缩略语与概念词汇表
 │   ├── quantum_computing_intro_course_zh.md
 │   │                                  # 系统入门课程、习题与答案
-│   ├── quantum_paradoxes_zh.md        # EPR、贝尔不等式、薛定谔的猫与因果性
+│   ├── quantum_paradoxes_zh.md        # 双缝、隧穿、EPR、贝尔不等式与薛定谔的猫
 │   ├── bb84_protocol_zh.md            # BB84 量子密钥分发详解
 │   ├── grover_algorithm_zh.md         # Grover 搜索与振幅放大详解
 │   ├── shor_algorithm_zh.md           # Shor 算法技术细节图解
@@ -128,7 +128,7 @@ python examples/06_grover_search.py
 1. 阅读 [docs/quickstart_zh.md](docs/quickstart_zh.md)，用 30 到 90 分钟建立第一层直觉。
 2. 遇到缩略语时查 [docs/glossary_zh.md](docs/glossary_zh.md)，例如 QPE、逆 QFT、VQE、QAOA、KEM、AEAD。
 3. 阅读 [docs/quantum_computing_intro_course_zh.md](docs/quantum_computing_intro_course_zh.md)，系统学习 9 章核心概念并完成习题。
-4. 阅读 [docs/quantum_paradoxes_zh.md](docs/quantum_paradoxes_zh.md)，用 EPR、贝尔不等式和薛定谔的猫理解纠缠、测量、无信号和因果性。
+4. 阅读 [docs/quantum_paradoxes_zh.md](docs/quantum_paradoxes_zh.md)，用双缝干涉、量子隧穿、EPR、贝尔不等式和薛定谔的猫理解波函数、纠缠、测量、无信号和因果性。
 5. 阅读 [docs/bb84_protocol_zh.md](docs/bb84_protocol_zh.md)，理解 BB84 量子密钥分发和窃听检测。
 6. 阅读 [docs/grover_algorithm_zh.md](docs/grover_algorithm_zh.md)，理解 Grover 如何用 oracle 和 diffuser 放大目标振幅。
 7. 阅读 [docs/shor_algorithm_zh.md](docs/shor_algorithm_zh.md)，理解 Shor 算法如何把整数分解转化为周期寻找。
